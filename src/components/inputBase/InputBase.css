@@ -1,0 +1,29 @@
+label {
+    height: 42px;
+    /* display: block; */
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    position: relative;
+}
+
+.errorLabel {
+    color: firebrick;
+    margin-bottom: 20px;
+
+}
+
+.input-root {
+    border: 1px solid rgb(160, 161, 161);
+    border-radius: 6px;
+    padding: 10px;
+    line-height: 1.2px;
+    width: 480px
+}
+
+.error {
+    font-size: 14px;
+    color: red;
+    position: absolute;
+    top: 45px;    
+}

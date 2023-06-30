@@ -1,0 +1,298 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  min-width: 320px;
+  min-height: 100vh;
+  border: 1px solid grey;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+.container {
+  padding: 5px 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.storeWrapper {
+  background-color: rgb(227, 240, 248);
+  padding: 30px;
+  min-width: 777px;
+  text-align: center;
+}
+
+.radioWrapper {
+  display: flex;    
+  justify-content: space-around;
+  letter-spacing: 2.0px;
+  font-weight: 300;
+  font-size: 20px;
+}
+
+.iconWrapper img  {
+  height: 25px;
+  width: 25px;
+}
+
+.itemImageWrapper {
+  padding: 40px 0 10px;
+}
+.itemImageWrapper img {
+  width: 125px;  
+}
+
+.cartBodyWrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cartLeftBlock {
+  flex: 1;
+  border-left: 5px solid #fffdf3;
+}
+
+.cartLeftBlockBody {
+  margin: 20px;
+  padding: 0 20px;
+}
+
+.cartLeftBlock form input[type='text'] {
+  width: 420px;
+}
+
+.cartLeftBlock .errorLabel {
+  padding: 20px;
+}
+
+.itemWrapper {
+  box-shadow: 4px 2px 7px -3px cadetblue;
+  margin: 20px;
+  background: #fffdf3;
+  padding-bottom: 20px;
+}
+
+.itemWrapper:hover {
+  box-shadow: 1px 1px 10px -3px dodgerblue;
+}
+
+.itemName {
+  font-size: 30px;
+  color: darkblue;
+  font-weight: 700;
+  padding: 0 0 10px;
+}
+
+.itemPrice {
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.qtyWrapper {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+  border: 1px solid;
+  margin: 0 20px;
+  padding: 10px;
+  font-size: 22px;
+}
+.qtyWrapper select {
+  background: #eff3f5;
+  padding: 5px;
+  border-radius: 5px;
+  outline: transparent;
+  border: transparent;
+  font-size: 16px;
+}
+
+.btnWrapper {
+  display: flex;
+  gap: 20px;
+  justify-content: center
+}
+
+.express {
+  border: 1px solid burlywood;
+  font-weight: 700;
+  box-shadow: 3px 3px 3px 1px cadetblue;
+  margin-bottom: 20px;
+}
+
+.checkbox {
+  display: flex;
+  justify-content: space-around;
+}
+
+.summary {
+  list-style: none;
+  background: #fffdf3;
+  border-radius: 0 20px 20px 0;
+  flex: 1;
+  margin: 20px 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-between;
+}
+
+.summaryHeader {
+  display: flex;
+  justify-content: space-evenly;
+  background: #1e1c1c;
+  color: #dfd4d4;
+  letter-spacing: 2px;
+  font-size: 18px;
+}
+
+.summary .promo {
+  background: #fff9bf;
+}
+
+.summaryItems {
+  display: flex;
+  justify-content: space-evenly;
+  border-bottom: 1px dashed grey;
+  margin: 5px 0px;
+  align-items: center;
+}
+
+.summaryItems > div > img {
+  width: 30px;
+}
+
+.summary .totals ul {
+  list-style: none;
+  margin: 20px 0px;
+}
+
+.summary fieldset {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+}
+
+.summary fieldset > div {
+  display: flex;
+  justify-content: space-around;
+}
+
+.summary fieldset input[type='radio'] {
+  transform: scale(0.5);
+  flex: 1;  
+}
+
+.summary fieldset legend {
+  font-size: 20px;
+  font-style: italic;
+}
+
+.summary fieldset label {
+  flex: 1;
+  margin: 10px 20px;
+  font-size: 18px;
+  font-weight: 800;
+  color: #53087f;
+}
+
+.summary .totals {
+  text-align: right;
+  padding-right: 20px;
+}
+
+.summary .totals ul li:nth-last-child(2) {
+  border-bottom: 3px solid springgreen;
+  margin-bottom: 20px;
+}
+.summary .totals ul li:last-child {
+  font-size: 30px;
+  font-weight: 900;
+  color: cadetblue;
+}
+
+.summary .shippingANDpayment > div{
+  display: flex;
+  padding: 10px 20px;
+  justify-content: space-around
+}
+
+.progressBarWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.progressBarWrapper .bar {
+  height: 2px;
+  width: 50px;
+  background: rgb(42, 20, 20);
+  flex: 2;
+}
+
+.progressBarWrapper .statusBubble {
+  flex: 1;
+  display: flex;
+  border: 4px solid rgb(42, 20, 20);
+  border-radius: 50%;
+  padding: 15px;
+  justify-content: center;
+  max-width: 90px;
+}
+
+
+.progressBarWrapper .statusBubble img {
+  width: 60px;
+}
+
+.progressBarWrapper .completeBubble {
+  background: #91e0b8;
+  border-color: #4afa2b;
+}
+
+.progressBarWrapper .completeBar {
+  height: 12px;
+  background: #4afa2b;
+}
+
+.confirmation {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.confirmation >  {
+  flex: 1;
+}
+
+.confirmation h2 {
+  color: #53087f;
+  font-size: 35px;
+  font-weight: 800;  
+}
