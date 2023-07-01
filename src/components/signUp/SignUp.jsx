@@ -167,7 +167,6 @@ import { CARTITEMS } from '../constants'
     const cityIcon = <div className='iconWrapper'><img id='city' src={CITY} ></img></div> 
     const usaIcon = <div className='iconWrapper'><img id='usa' src={USA} ></img></div> 
     const numbersIcon = <div className='iconWrapper'><img id='numbers' src={NUMBERS} ></img></div>
-
     const inputData = [
       {
         id: 1, 
