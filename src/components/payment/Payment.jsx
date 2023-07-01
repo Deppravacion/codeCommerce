@@ -12,8 +12,6 @@ export class Payment extends React.Component {
         cardType: null,
     }
 
-  
-
     findDebitCardType = (cardParm) => {
         const regexPattern = {
             MASTERCARD: /^5[1-5][0-9]{1,}|^2[2-7][0-9]{1,}$/,
@@ -144,8 +142,7 @@ export class Payment extends React.Component {
                         ? inputData.map((item, index) => (
                             <label key={index} htmlFor={item.id} className='errorLabel'>
 
-                                <InputBase 
-                                
+                                <InputBase                                 
                                 placeholder={item.placeholder}
                                 type={item.type}
                                 value={cardData && cardData[item.name]}

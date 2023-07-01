@@ -6,14 +6,11 @@ import STAR from '../../assets/star.png'
 
 
 export const ProgressBar = (props) => {
-
   const page = props.miniDisplay
-
 
   return(
     <>    
-      <div className={`progressBarWrapper `} >
-      
+      <div className={`progressBarWrapper `} >      
         <div className={`statusBubble  completeBubble `}>
           <img src={CART} />
         </div>

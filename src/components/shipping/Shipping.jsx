@@ -8,8 +8,6 @@ import LETTERS from '../../assets/textOnly.png'
 import USA from '../../assets/usa.png'
 import STREET from '../../assets/street.png'
 
-
-
 export class Shipping extends React.Component {
 
   state = {

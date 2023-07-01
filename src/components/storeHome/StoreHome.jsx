@@ -3,7 +3,6 @@ import { Welcome } from '../welcome/Welcome'
 import { Cart } from '../cart/Cart'
 import { CARTITEMS, ALLUSERS } from '../constants'
 
-
 export class StoreHome extends Component {
   state = {
     displayPage: 'Cart', 
@@ -35,7 +34,6 @@ export class StoreHome extends Component {
     }));
   }
 
-
   calculateTotal = () => {
     const { cartItems, hasPromo, hasExpressShipping } = this.state;
     let total = 0;  
@@ -45,19 +43,9 @@ export class StoreHome extends Component {
     Object.values(cartItems).forEach((item) => {
       subTotal += item.price * item.quantity;
     })
-
     total = subTotal - discount + fee
     this.setState({ subTotal, total, discount, fee })
   }
-
-  // calculateSubTotal = () => {
-  //   const { cartItems } = this.state;
-  //   let subTotal = 0;  
-  //   Object.values(cartItems).forEach((item) => {
-  //     subTotal += item.price * item.quantity;
-  //   })
-  //   this.setState({ subTotal })
-  // }
 
   changeCartQuantity = (name, subName, subState) => {
     this.setState(prevState => {
@@ -71,7 +59,6 @@ export class StoreHome extends Component {
 
   changeExpressSpeed = (state) => this.changeState('hasExpressShipping', state, this.calculateTotal)   
 
-
   changeDisplayPage = (state) => this.changeState('displayPage', state) 
   changeCurrentuserIndex = (state) => this.changeState('currentUserIndex', state)
   addUser = (user) =>  {
@@ -84,22 +71,17 @@ export class StoreHome extends Component {
   
   render() {
     const { displayPage } = this.state
-
     return (
       <div className="storeWrapper">
         <h1> Bestus Online Marketplace</h1>
         <div className="components">
-
           { displayPage === 'Welcome' && 
             <Welcome 
             mainState={this.state}
             changeDisplayPage={this.changeDisplayPage}
             changeCurrentuserIndex={this.changeCurrentuserIndex}
             addUser={this.addUser}            
-            
             />}
-
-
             { displayPage ==='Cart' &&
               <Cart 
               mainState={this.state}
@@ -115,9 +97,5 @@ export class StoreHome extends Component {
       </div>
     )
   }
-
-
-
 }
-
 export default StoreHome

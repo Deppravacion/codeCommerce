@@ -43,7 +43,6 @@ export const Summary = (props) => {
           <span>quantity</span>
           <span>total</span>
         </div>
-
         { bricks.quantity > 0 || mortar.quantity > 0 
           ? Object.values(cartItems)
             .filter((elm) => elm.quantity > 0)
@@ -86,5 +85,4 @@ export const Summary = (props) => {
       </div>
     </>
   )
-   
 }

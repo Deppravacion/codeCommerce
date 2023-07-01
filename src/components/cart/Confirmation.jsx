@@ -1,18 +1,12 @@
 import React from "react";
 
-export const Confirmation = (props) => {
-
-
+export const Confirmation = () => {
 
   return(
-    <>
-    <div className="cartLeftBlockBody">
-
+  <div className="cartLeftBlockBody">
     <div className="confirmation">
       <div>
         <iframe 
-          // width="560" 
-          // height="315" 
           width='500'
           height='281'
           src="https://www.youtube.com/embed/ifJctID1zUc" 
@@ -25,7 +19,6 @@ export const Confirmation = (props) => {
         <h2>Confirmation Complete! </h2>
       </div>   
     </div>
-    </div>
-    </>
+  </div>
   )
 }

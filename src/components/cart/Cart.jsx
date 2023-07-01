@@ -14,47 +14,21 @@ export const Cart = (props) => {
   const currentUser = allUsers[currentUserIndex]
   const { cartItems } = props.mainState
   const { cartItems: { bricks, mortar} } = props.mainState
-
   const [miniDisplay, setMiniDisplay] = useState('Items')
   const [cardType, setCardType] = useState('')
-  const goHome = () => props.changeDisplayPage('Welcome')
-
-  const goForward = () => {
-    let result = false
-    if (miniDisplay == 'Items') {
-      result = bricks?.quantity > 0 || mortar?.quantity > 0 ? false : true
-    }
-    if (miniDisplay === 'Shipping') {
-      if (mainState?.Shipping && Object.keys(mainState.Shipping).length > 1) {
-        result = true;
-      }
-    }
-    return result
-  }
-  const goBack = () => {
-    let result = miniDisplay == 'Payment' 
-      ? 'Shipping'  
-      : 'Items'
-    setMiniDisplay(result)
-    return miniDisplay
-  }
-
-  
+  const goHome = () => props.changeDisplayPage('Welcome')  
   const cardTypeDrill = (state) => setCardType(state)
   const changeMiniPage = (page) => setMiniDisplay(page)
   const goShipping = () => setMiniDisplay('Shipping')
   const goPayment = () =>  setMiniDisplay('Payment') 
   const goItems = () => setMiniDisplay('Items')
   const goConfirmation = () => setMiniDisplay('Confirmation')
-  
-
 
   return(
     <>
       <ProgressBar 
         miniDisplay={miniDisplay}
-      />
- 
+      /> 
       <h2>welcome Mr.{currentUser.firstName} {currentUser.lastName}</h2>
       <div className="cartBodyWrapper">
       <div className="cartLeftBlock">     
