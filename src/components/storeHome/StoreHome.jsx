@@ -5,7 +5,7 @@ import { CARTITEMS, ALLUSERS } from '../constants'
 
 export class StoreHome extends Component {
   state = {
-    displayPage: 'Cart', 
+    displayPage: 'Welcome', 
     currentUserIndex: 0,
     error: {},
     allUsers: ALLUSERS, 

@@ -1,5 +1,6 @@
 import React from 'react'
-import { Summary } from '../summary/summary'
+// import { Summary } from '../summary/summary'
+import { Summary } from '../summary/Summary'
 import { Items } from './Items';
 import { Shipping } from '../shipping/Shipping';
 import { useState } from 'react';
